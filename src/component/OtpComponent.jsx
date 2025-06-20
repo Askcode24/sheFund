@@ -1,4 +1,4 @@
-import DarkLogo from '../images/Registers/Logo/dark.png';
+import DackLogo from '../images/Registers/Logo/dark.png';
 import { ForgetAside } from './ForgetAside';
 import OTPInput from 'otp-input-react';
 import '../styles/OtpComponent.css';
@@ -59,7 +59,7 @@ const OtpComponent = () => {
   return (
     <div className="otp-verify-container">
       <div className="forAside">
-        <ForgetAside DarkLogo={DarkLogo} />
+        <ForgetAside DarkLogo={DackLogo} />
       </div>
       <div className="otp-verify-div">
         <div className="otp-verify-inputs">
