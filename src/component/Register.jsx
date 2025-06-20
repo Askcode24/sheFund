@@ -1,5 +1,5 @@
 import { ForgetAside } from './ForgetAside';
-import DarkLogo from '../images/Registers/Logo/dark.png';
+import DarcLogo from '../images/Registers/Logo/dark.png';
 import EmailImg from '../images/Registers/image1.png';
 import PasswordImg from '../images/Registers/image2.png';
 import { Link, useLocation } from 'react-router-dom';
@@ -132,7 +132,7 @@ const Register = () => {
 
   return (
     <div className="create-account-container">
-      <ForgetAside DarkLogo={DarkLogo} />
+      <ForgetAside DarkLogo={DarcLogo} />
       <div className="create-account-inputs">
         {showOtp ? (
           <EmailVerification email={otpEmail} user={form} />
