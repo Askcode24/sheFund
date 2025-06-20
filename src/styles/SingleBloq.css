@@ -1,0 +1,326 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .SingleBloq {
+  position: relative;
+  width: 100%;
+  height: 3475px;
+  background: #fafafa;
+}
+
+:root {
+  /* COLORS */
+  --HEADER-BG: linear-gradient(0deg, #ff6c20, #ff6c20), #ffffff;
+  --HEADER-COLOR: #ffffff;
+
+  /* line hieght */
+  --LINE-HIEGHT: 1.7;
+
+  /* fonts */
+  --logo-fs: 1rem;
+  --logo-fw: bolder;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* shadows */
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 20px 15px -3px rgba(0, 0, 0, 0.027),
+    0 4px 6px -2px rgba(0, 0, 0, 0.212);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.single-bloq-nav .nav-container {
+  gap: 380px;
+}
+
+.single-bloq-nav .resgister {
+  display: none;
+}
+
+.single-bloq-nav .nav-links .nav-home {
+  display: none;
+}
+
+.singlebloq-container {
+  position: absolute;
+  width: 1233.76px;
+  height: 2843.64px;
+  margin: 130px 60px;
+}
+
+.singlebloq-container .bloq-info {
+  position: absolute;
+  width: 220px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  left: 204px;
+}
+
+.bloq-info .bloq-dev h5 {
+  position: relative;
+  width: 95px;
+  height: 20px;
+  /* font-family: 'Roboto'; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: #333333;
+}
+
+.bloq-info p {
+  position: relative;
+  width: 110px;
+  height: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  color: #999999;
+  /* left: 50px; */
+}
+
+.singlebloq-container .bloq-game-info h1 {
+  position: absolute;
+  width: 800px;
+  height: 110.03px;
+  left: 206.1px;
+  top: 50px;
+  font-size: 39px;
+  color: #333333;
+}
+
+.singlebloq-container .bloq-img-container img {
+  position: absolute;
+  width: 1234px;
+  height: 608px;
+  top: 220px;
+  border-radius: 15px;
+  background: #cce9ff;
+}
+
+.singlebloq-container .single-bloq-paracont p {
+  position: relative;
+  width: 970px;
+  height: 207.5px;
+  margin: 900px 130px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 150%;
+  color: #999999;
+}
+
+.singlebloq-container .single-bloq-qoutecont {
+  position: relative;
+  width: 875.39px;
+  height: 132.34px;
+  left: 170px;
+  bottom: 860px;
+}
+
+.single-bloq-qoutecont .bloq-stroke {
+  position: absolute;
+  width: 5px;
+  height: 104px;
+  background: #ff6c20;
+}
+
+.single-bloq-qoutecont .qoute-author {
+  position: absolute;
+  width: 131.43px;
+  height: 15.34px;
+  margin-top: 10px;
+  left: 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 150%;
+  color: #333333;
+}
+
+.singlebloq-container .single-paragraph {
+  position: absolute;
+  width: 970px;
+  height: 135.58px;
+  left: 130px;
+  top: 1330px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 150%;
+  color: #999999;
+}
+
+.singlebloq-container .single-imgcont .single-img {
+  position: absolute;
+  width: 816px;
+  height: 312px;
+  left: 200px;
+  top: 1500px;
+  background: url(../images/SingleBloq/Image.png), #fff;
+  border-radius: 15px;
+}
+
+.singlebloq-container .single-imgcont .single-overlay {
+  position: absolute;
+  width: 504px;
+  height: 312px;
+  left: 360px;
+  top: 1500px;
+  background: #cce9ff;
+  opacity: 0.56;
+}
+
+.singlebloq-container .bloq-lastparagraph {
+  position: absolute;
+  width: 970px;
+  height: 63.58px;
+  left: 130px;
+  top: 1860px;
+  font-style: normal;
+  color: #333333;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  line-height: 150%;
+}
+
+.singlebloq-container .bloqs-poular-post {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  font-size: 40px;
+  color: #333333;
+  position: absolute;
+  width: 286.93px;
+  padding-bottom: 55px;
+  height: 45.26px;
+  top: 2050px;
+}
+
+.singlebloq-container .single-grids {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 674px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  top: 30px;
+}
+
+.singlebloq-container .single-grids .single-bloq-grids {
+  position: relative;
+  width: 401.76px;
+  height: 674px;
+  /* left: 100.24px; */
+  /* top: 2170px; */
+}
+
+.single-grids .single-bloq-grids .single-placeholder {
+  position: absolute;
+  width: 100%;
+  height: 360px;
+}
+
+.single-bloq-grids .bloqs-texts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 43.7%;
+  position: relative;
+  top: 360px;
+}
+
+/* Blog category/title */
+.bloqs-texts h5 {
+  width: 20%;
+  height: 6%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: #333333;
+  position: relative;
+  top: 40px;
+}
+
+/* Blog date */
+.bloqs-texts p {
+  height: 6%;
+  position: relative;
+  width: 30%;
+  top: 22px;
+  left: 60px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  color: #999999;
+}
+
+.bloqs-texts .dev {
+  left: 100px;
+}
+
+/* Blog subheading */
+.bloq-subhead {
+  position: absolute;
+  width: 100%;
+  height: 62px;
+  top: 70px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #333333;
+}
+
+.paragraph {
+  position: absolute;
+  top: 160px;
+  width: 100%;
+  height: 50%;
+}
+
+.span {
+  position: absolute;
+  width: 400px;
+  height: 72px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #666666;
+}
+
+/* "Read More" link */
+.alink a {
+  position: absolute;
+  width: 30%;
+  height: 27px;
+  top: 110px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  text-decoration-line: underline;
+  color: #ff6c20;
+}
+
+.single-bloq-footer .container {
+  top: 3105px;
+}

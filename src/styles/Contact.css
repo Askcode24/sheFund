@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .contact-contaner {
+  background: #f3f2f2;
+  height: 240vh;
+  width: 100%;
+}
+
+:root {
+  /* COLORS */
+  --HEADER-BG: linear-gradient(0deg, #ff6c20, #ff6c20), #ffffff;
+  --HEADER-COLOR: #ffffff;
+
+  /* line hieght */
+  --LINE-HIEGHT: 1.7;
+
+  /* fonts */
+  --logo-fs: 1rem;
+  --logo-fw: bolder;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* shadows */
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 20px 15px -3px rgba(0, 0, 0, 0.027),
+    0 4px 6px -2px rgba(0, 0, 0, 0.212);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.contact {
+  position: relative;
+  background: #fafafa;
+}
+
+.contact-nav .nav-container {
+  gap: 380px;
+}
+
+.contact-nav .resgister {
+  display: none;
+}
+
+.contact-nav .nav-links .nav-home {
+  display: none;
+}
+
+.contact-container {
+  position: absolute;
+  width: 1161px;
+  background: #f3f2f2;
+  height: 1222px;
+  margin: 160px 92px;
+}
+
+.contact-container .contact-header {
+  position: absolute;
+  width: 400px;
+  height: 64px;
+  margin: auto 400px;
+  font-family: 'Raleway' sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #333333;
+}
+
+.contact-container .contact-paragraph {
+  position: absolute;
+  width: 442px;
+  height: 48px;
+  left: 380px;
+  top: 80px;
+  font-family: 'Raleway' sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #999999;
+}
+
+.contact-container .contact-box-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 180px;
+}
+
+.contact-container .contact-box {
+  position: relative;
+  width: 373px;
+  height: 244px;
+  background: #ffffff;
+  box-shadow: 3px 1px 43px rgba(124, 78, 228, 0.04);
+  border-radius: 16px;
+}
+
+.contact-box-container .contact-box .boxspans {
+  border-radius: 50px;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin: 20px 150px;
+  background: #ff6c20;
+}
+
+.contact-box .boxspans .boximg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 23px 23px;
+}
+
+.contact-box-container .contact-box .contact-name {
+  position: absolute;
+  width: 56px;
+  height: 23px;
+  margin: 110px 157px;
+  font-family: 'Raleway' sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #ff6c20;
+}
+
+.contact-box-container .contact-box .contact-paragraph {
+  position: absolute;
+  width: 250px;
+  height: 28px;
+  left: 62px;
+  top: 150px;
+  font-family: 'Raleway' sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.005em;
+
+  color: #7a7a7a;
+}
+
+.contact-container .customer-input-container {
+  /* Frame 1 */
+
+  position: absolute;
+  width: 768px;
+  height: 672px;
+  left: 200px;
+  top: 550px;
+}
+
+.contact-container .customer-input-container .input-feeds-container form {
+  position: absolute;
+  width: 768px;
+  height: 672px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  box-shadow: 7px 8px 54px rgba(124, 78, 228, 0.07);
+  border-radius: 16px;
+}
+
+.input-feeds-container .input-feeds {
+  display: grid;
+  margin: 50px auto;
+  height: 35%;
+  width: 85%;
+  gap: 20px;
+  padding: 7px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.input-feeds-container .input-feeds .inputs-container {
+  position: relative;
+  height: 80%;
+}
+
+.inputs-container input {
+  box-sizing: border-box;
+  position: absolute;
+  width: 311px;
+  height: 54px;
+  margin: 40px 0px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  font-family: 'Raleway', Arial, sans-serif; /* Add this */
+  font-size: 16px; /* Add this */
+  font-weight: 500; /* Add this */
+  color: #333333; /* Add this */
+}
+
+.input-feeds-container label {
+  position: absolute;
+  width: 46px;
+  height: 28px;
+  font-family: 'Raleway' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.005em;
+
+  color: #4c4c4c;
+}
+
+.input-feeds-container .textarea-container {
+  position: absolute;
+  width: 643px;
+  height: 209px;
+  left: 62px;
+  top: 320px;
+}
+
+.textarea-container textarea {
+  /* Rectangle 55 */
+
+  box-sizing: border-box;
+  word-break: normal;
+  word-wrap: break-word;
+
+  position: absolute;
+  width: 642px;
+  height: 173px;
+  margin: 35px auto;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  font-family: 'Raleway', Arial, sans-serif; /* Add this */
+  font-size: 16px; /* Add this */
+  font-weight: 500; /* Add this */
+  color: #333333; /* Add this */
+}
+
+.textarea-container label {
+  position: absolute;
+  width: 69px;
+  height: 28px;
+  font-family: 'Raleway' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.005em;
+  color: #4c4c4c;
+}
+
+.input-feeds-container .send-btn-container {
+  position: absolute;
+  width: 177px;
+  height: 60px;
+  left: 295px;
+  top: 560px;
+}
+
+.send-btn-container .send-btn {
+  position: absolute;
+  width: 177px;
+  height: 60px;
+  border: none;
+  background: #ff6c20;
+  border-radius: 4px;
+  font-family: 'Raleway' sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.contact-footer .container {
+  top: 1450px;
+}
