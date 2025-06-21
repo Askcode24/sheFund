@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AsideAll } from '../component/AsideAll';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Login.css';
-import DarkLogo from '../images/Registers/Logo/dark.png';
+import DarkLogo from '../images/Registers/Logo/Dark.png';
 import EmailImg from '../images/Registers/image1.png';
 import PasswordImg from '../images/Registers/image2.png';
 import AuthService from '../api/authService';
