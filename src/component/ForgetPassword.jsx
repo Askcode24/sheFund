@@ -1,4 +1,4 @@
-import DarkLogo from '../images/Registers/Logo/dark.png';
+import DarkLogo from '../images/Registers/Logo/Dark.png';
 import '../styles/Register.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { ForgetAside } from './ForgetAside';

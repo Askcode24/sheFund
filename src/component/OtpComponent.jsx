@@ -1,4 +1,4 @@
-import DackLogo from '../images/Registers/Logo/dark.png';
+import DackLogo from '../images/Registers/Logo/Dark.png';
 import { ForgetAside } from './ForgetAside';
 import OTPInput from 'otp-input-react';
 import '../styles/OtpComponent.css';
