@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@layer utilities {
+  .font-numeric {
+    font-feature-settings: 'pnum' on, 'lnum' on;
+  }
+}
+/* @font-face {
+  font-family: 'Satoshi';
+  src: url('/src/assets/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+} */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/src/assets/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+}

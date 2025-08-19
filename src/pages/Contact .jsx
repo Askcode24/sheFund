@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ContactForm } from '../component/contact-form';
 import { Footer } from './Footer';
 import { Navbar } from './Navbar';
@@ -8,8 +9,6 @@ import Twitter from '../images/icons/twitter.png';
 import Vector from '../images/Contacts/Vector.png';
 import Vector1 from '../images/Contacts/Frame.png';
 import Vector2 from '../images/Contacts/Vector2.png';
-import '../styles/Contact.css';
-import { useState } from 'react';
 
 const Contact = () => {
   const [feedBack, setFeedBack] = useState({
@@ -19,7 +18,6 @@ const Contact = () => {
     subject: '',
     message: '',
   });
-  // const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     setFeedBack({ ...feedBack, [e.target.name]: e.target.value });
@@ -38,72 +36,79 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-contaner">
-      <div className="contact">
-        <div className="contact-nav">
-          <Navbar Logo={Logo} />
-        </div>
-        <div className="contact-container">
-          <span className="contact-header">Get in Touch</span>
-          <span className="contact-paragraph">
-            Contact us to publish your content and show ads to our
-            <br /> website and get a good reach.
-          </span>
-          <div className="contact-box-container">
-            <div className="contact-box">
-              <span className="boxspans">
-                <span className="boximg">
-                  <img src={Vector} alt="adress" />
-                </span>
-              </span>
-              <span className="contact-name">Office</span>
-              <span className="contact-paragraph">
-                <p>Victoria Street, London, UK</p>
-              </span>
+    <div className="bg-[#f3f2f2] min-h-screen w-full">
+      <Navbar Logo={Logo} />
+
+      <section className="max-w-6xl pt-40 mx-auto px-4 py-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-[#333333] font-['raleway']">
+          Get in Touch
+        </h2>
+        <p className="text-center text-[#999] mt-4 mb-16 font-['raleway'] lg:text-lg md:text-sm">
+          Contact us to publish your content and show ads to our{' '}
+          <br className="hidden md:block" />
+          website and get a good reach.
+        </p>
+
+        {/* Info Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+          {/* Office */}
+          <div className="bg-white  rounded-2xl p-8 flex flex-col items-center text-center">
+            <div className="bg-[#ff6c20] rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <img src={Vector} alt="office" className="w-6 h-6" />
             </div>
-            <div className="contact-box">
-              <span className="boxspans">
-                <span className="boximg">
-                  <img src={Vector1} alt="message" />
-                </span>
-              </span>
-              <span className="contact-name">Email</span>
-              <span className="contact-paragraph">
-                <p>hello@shefund.com</p>
-              </span>
-            </div>
-            <div className="contact-box">
-              <span className="boxspans">
-                <span className="boximg">
-                  <img src={Vector2} alt="call" />
-                </span>
-              </span>
-              <span className="contact-name">Phone</span>
-              <span className="contact-paragraph">
-                <p>(001) 2342 3451</p>
-              </span>
-            </div>
+            <h4 className="text-[#ff6c20] font-bold text-lg mb-2 font-['raleway'] ">
+              Office
+            </h4>
+            <p className="text-[#7a7a7a] text-base font-['raleway'] font-medium">
+              Victoria Street, London, UK
+            </p>
           </div>
-          <div className="customer-input-container">
-            <div className="input-feeds-container">
-              <ContactForm
-                feedBack={feedBack}
-                handleSubmit={handleSubmit}
-                handleChange={handleChange}
-              />
+
+          {/* Email */}
+          <div className="bg-white  rounded-2xl p-8 flex flex-col items-center text-center">
+            <div className="bg-[#ff6c20] rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <img src={Vector1} alt="email" className="w-6 h-6" />
             </div>
+            <h4 className="text-[#ff6c20] font-bold text-lg mb-2 font-['raleway'] ">
+              Email
+            </h4>
+            <p className="text-[#7a7a7a] text-base font-['raleway'] font-medium">
+              hello@shefund.com
+            </p>
+          </div>
+
+          {/* Phone */}
+          <div className="bg-white  rounded-2xl p-8 flex flex-col items-center text-center">
+            <div className="bg-[#ff6c20] rounded-full w-16 h-16 flex items-center justify-center mb-4">
+              <img src={Vector2} alt="phone" className="w-6 h-6" />
+            </div>
+            <h4 className="text-[#ff6c20] font-bold text-lg mb-2 font-['raleway'] ">
+              Phone
+            </h4>
+            <p className="text-[#7a7a7a] text-base font-['raleway'] font-medium">
+              (001) 2342 3451
+            </p>
           </div>
         </div>
-        <div className="contact-footer">
-          <Footer
-            Logo={Logo}
-            Facebook={Facebook}
-            Linkedin={Linkedin}
-            Twitter={Twitter}
+
+        {/* Contact Form */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto">
+          <ContactForm
+            feedBack={feedBack}
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
           />
         </div>
-      </div>
+      </section>
+
+      <Footer
+        Logo={Logo}
+        Facebook={Facebook}
+        Linkedin={Linkedin}
+        Twitter={Twitter}
+      />
     </div>
   );
 };
+
 export default Contact;

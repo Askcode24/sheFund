@@ -6,7 +6,6 @@ const DeleteAllUsers = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // Always use the latest token from localStorage
   const token = localStorage.getItem('shefund_token') || '';
   console.log(token);
 
@@ -19,15 +18,12 @@ const DeleteAllUsers = () => {
         });
         setUsers(response.data || []);
       } catch (err) {
-        // Check for token expiration error
         if (
           err?.response?.data?.message === 'Token has expired' ||
           err?.message?.includes('Token has expired')
         ) {
           localStorage.removeItem('shefund_token');
           toast.error('Session expired. Please log in again.');
-          // Optionally, redirect to login page:
-          // navigate('/login');
         } else {
           toast.error('Failed to fetch users');
         }

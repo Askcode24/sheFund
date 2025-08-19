@@ -8,6 +8,8 @@ import Bloq from './pages/Bloq';
 import SingleBloq from './pages/SingleBloq';
 import About from './pages/About ';
 import Contact from './pages/Contact ';
+import Career from './pages/Career';
+import Product from './pages/Product';
 import Register from './component/Register';
 import Login from './pages/Login';
 import ForgetPassword from './component/ForgetPassword';
@@ -23,6 +25,8 @@ function App() {
         <Route path="/bloq/:id" element={<SingleBloq />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgetPassword" element={<ForgetPassword />} />

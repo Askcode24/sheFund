@@ -1,14 +1,12 @@
 import { useState } from 'react';
-import { AsideAll } from '../component/AsideAll';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/Login.css';
-import DarkLogo from '../images/Registers/Logo/Dark.png';
 import EmailImg from '../images/Registers/image1.png';
 import PasswordImg from '../images/Registers/image2.png';
 import AuthService from '../api/authService';
 import { withApi } from '../api/withApi';
 import { toast } from 'react-toastify';
 import Logo from '../images/Logo/Logo/Dark.png';
+import AuthLayout from '../component/AuthLayout';
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -68,96 +66,105 @@ const Login = () => {
   };
 
   return (
-    <div className="login-page-container">
-      <AsideAll DarkLogo={DarkLogo} />
-      <div className="login-container">
-        <div className="login-content">
-          <span
-            className="logo"
-            style={{ textAlign: 'center', margin: '10px auto  ' }}
-          >
-            <img src={Logo} alt="" />
-          </span>
-          <div className="login-form-container">
-            <div className="login-heading">Login</div>
-            <span className="login-para">Input your credentials</span>
-            <div className="login-form">
-              <form onSubmit={handleSubmit}>
-                {generalError && (
-                  <div style={{ color: '#fff', marginBottom: 8, fontSize: 13 }}>
-                    {generalError}
-                  </div>
-                )}
-                <div className="login-input1">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Please fill in your email address"
-                    value={form.email}
-                    onChange={handleChange}
-                  />
-                  <img src={EmailImg} alt="" />
-                </div>
-                {emailError && (
-                  <div style={{ color: '#fff', marginTop: 5, fontSize: 13 }}>
-                    {emailError}
-                  </div>
-                )}
-                <div className="login-input2">
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Please fill in your password"
-                    value={form.password}
-                    onChange={handleChange}
-                  />
-                  <img src={PasswordImg} alt="" />
-                </div>
-                {passwordError && (
-                  <div style={{ color: '#fff', marginTop: 5, fontSize: 13 }}>
-                    {passwordError}
-                  </div>
-                )}
-                <span className="forget-password">
-                  <Link className="link" to="/forgetPassword">
-                    Forgot Password?
-                  </Link>
-                </span>
-                <div className="login-action-container">
-                  <button
-                    type="submit"
-                    className="login-btn"
-                    disabled={!form.email || !form.password || loading}
-                  >
-                    {loading ? 'Logging in...' : 'Login'}{' '}
-                  </button>
-                  <span className="register-link">
-                    <Link className="link" to="/register">
-                      Don’t have account ? Register
-                    </Link>
-                  </span>
-                </div>
-              </form>
-            </div>
-            <div className="login-asides">
-              <span className="mobile">
-                <a style={{ fontSize: '1rem' }} href="">
-                  Terms and conditions
-                </a>
-                <a style={{ fontSize: '1rem' }} href="">
-                  | FAQs
-                </a>
-                <a style={{ fontSize: '1rem' }} href="">
-                  | Contact us
-                </a>
-              </span>
-            </div>
-          </div>
+    <AuthLayout>
+      <>
+        <div className="align-center justify-center mb-6 lg:hidden text-white flex flex-cols md:mb-15">
+          <img className="w-32 md:w-44 md:h-18 h-12" src={Logo} alt="" />
         </div>
-      </div>
-    </div>
+
+        <h2 className="lg:text-[55px] font-['inter'] md:font-bold font-semibold mb-2 text-[40px]">
+          Login
+        </h2>
+        <p className="text-white mb-5 font-['inter'] text-[14px] lg:text-[22px] font-normal">
+          Input your credentials
+        </p>
+
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-7 sm:space-y-6 lg:space-y-5"
+        >
+          {generalError && (
+            <div className="text-white relative mb-2 text-[13px]">
+              {generalError}
+            </div>
+          )}
+          <div className="relative">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Please fill in your email address"
+              value={form.email}
+              onChange={handleChange}
+              className="w-full px-4 py-4 pr-12 h-[55px] rounded-lg leading-[18px] bg-white text-[20px] text-[#222222] placeholder-[#00000040] text-start font-[400] font-['gotham']"
+            />
+            <img
+              src={EmailImg}
+              className="absolute right-5 top-1/2 transform -translate-y-1/2 w-9 h-6"
+              alt="email"
+            />
+          </div>
+          {emailError && (
+            <div className="text-white relative mt-1 text-[13px]">
+              {emailError}
+            </div>
+          )}
+          <div className="relative">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Please fill in your password"
+              value={form.password}
+              onChange={handleChange}
+              className="w-full px-4 py-4 pr-12 h-[55px] rounded-lg leading-[18px] bg-white text-[20px] text-[#222222] placeholder-[#00000040] text-start font-[400] font-['gotham']"
+            />
+            <img
+              src={PasswordImg}
+              className="absolute right-5 top-1/2 transform -translate-y-1/2 w-9 h-6"
+              alt="password"
+            />
+          </div>
+          {passwordError && (
+            <div className="text-white relative mt-1 text-[13px]">
+              {passwordError}
+            </div>
+          )}
+          <span className="text-white mt-3 justify-end  text-right flex-cols flex">
+            <Link
+              className="text-white text-right font-['inter'] text-[19px] underline font-normal"
+              to="/forgetPassword"
+            >
+              Forgot Password?
+            </Link>
+          </span>
+          <div className="flex justify-center mt-16">
+            <button
+              type="submit"
+              className="w-48 py-3 bg-white text-[#FF6C20] font-medium rounded-full text-center hover:opacity-90 text-[23px] font-['inter'] disabled:bg-[#ccc] disabled:text-[#888] disabled:cursor-not-allowed disabled:opacity-[0.7]"
+              disabled={!form.email || !form.password || loading}
+            >
+              {loading ? 'Logging in...' : 'Login'}{' '}
+            </button>
+          </div>
+          <span className="flex justify-center">
+            <Link
+              className="text-white text-right font-['inter'] text-[19px] underline font-normal"
+              to="/register"
+            >
+              Don’t have account ? Register
+            </Link>
+          </span>
+        </form>
+        <div className="block lg:hidden text-[17px] text-center font-['poppins'] text-white mt-6 mb-4 space-x-2">
+          <a href="#">Terms and conditions</a>
+          <span>|</span>
+          <a href="#">FAQs</a>
+          <span>|</span>
+          <a href="#">Contact us</a>
+        </div>
+      </>
+    </AuthLayout>
   );
 };
 

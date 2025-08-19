@@ -1,11 +1,8 @@
-import { NewsletterInput } from '../component/NewsletterInput';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
-import { useNavigate } from 'react-router-dom';
-import '../styles/Home.css';
+
 import Logo from '../images/Logo/logo.png';
-// import Earth from '../images/Earth/Earth.png';
-// import Device from '../images/Heropage device/Group 1672.png';
 import Hero from '../images/App/Heropage.png';
 import Partner from '../images/Trusted Partner/placeholders.png';
 import Sector from '../images/Features logo/Frame 1171277758.png';
@@ -16,6 +13,7 @@ import LoanIcon from '../images/Loans icons/Frame 1171277758 (1).png';
 import LoanImg from '../images/Loan Sector/Frame 101246.png';
 import ReferGift from '../images/Refer friend/Frame 1171277763.png';
 import AfricaImg from '../images/Africa/image3.png';
+import Icon from '../images/Africa/icon.png';
 import Stat1 from '../images/statsIcons/System.png';
 import Stat2 from '../images/statsIcons/System2.png';
 import Stats3 from '../images/statsIcons/System.png';
@@ -27,377 +25,390 @@ import PlayStore from '../images/Stores/PlayStore.png';
 import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
-// import App from '../images/Stores/basic.png';
+
 const Home = () => {
   const navigate = useNavigate();
+
   return (
-    <div className="home-container">
+    <div className="bg-white text-gray-800 font-outfit">
       <Navbar Logo={Logo} />
-      <div className="heropage-container">
-        <div className="heropage">
-          <div className="heropage-text">
-            <h1>
-              Leading women on <br />
-              the journey to <br />
-              financial freedom
+
+      {/* Hero Section */}
+      <section className="bg-[#ff6c20] pt-24 pb-16">
+        <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-10">
+          <div className="md:w-1/2 space-y-6 text-white">
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+              Leading women on <br /> the journey to <br /> financial freedom
             </h1>
-            <span className="herotext">
-              <p>
-                Unlock your financial power with SheFund! Designed for <br />
-                underserved and unbanked women, our innovative <br />
-                platform empowers you to take control of your finances <br />
-                and build a brighter future, join a commmunity that <br />
-                celebrates your strenght, elevates your potential, and <br />
-                champions your journey towards financial independdence. <br />
-                It's time to thrive; let's find your dreams together!
-              </p>
-            </span>
-          </div>
-          <div className="buttons">
-            <button className="btn login" onClick={() => navigate('/register')}>
-              Get Started
-            </button>
-            <button className="btn">Downlaod</button>
-          </div>
-        </div>
-        <div className="aside_container">
-          {/* <div className="earth">
-            <img src={Earth} alt="earth" width={'80%'} />
-          </div> */}
-          <div className="device">
-            <img src={Hero} alt="device" width={'100%'} />
-          </div>
-        </div>
-      </div>
-      <div className="section-partners-container">
-        <div className="section-partners">
-          <div className="content">
-            <h2>Our Trusted Partners</h2>
-            <p>
-              Powered by collaboration, Shefund partners with trusted <br />
-              industry leaders to redefine digital finance.
+            <p className="text-white text-base md:text-lg font-poppins">
+              Unlock your financial power with SheFund! Designed for underserved
+              and unbanked women, our innovative platform empowers you to take
+              control of your finances and build a brighter future. Join a
+              community that celebrates your strength and champions your journey
+              toward independence.
             </p>
+            <div className="flex flex-wrap gap-4">
+              <button
+                onClick={() => navigate('/register')}
+                className="px-6 py-3 bg-white text-[#ff6c20] rounded-full shadow hover:bg-orange-100 transition"
+              >
+                Get Started
+              </button>
+              <button className="px-6 py-3 border border-white text-white rounded-full hover:bg-white hover:text-[#ff6c20] transition">
+                Download
+              </button>
+            </div>
           </div>
-          <div className="partners-placeholder">
-            <img src={Partner} alt="Partner" />
+          <div className="md:w-1/2">
+            <img src={Hero} alt="Hero" className="w-full max-w-lg mx-auto" />
           </div>
-          <span className="features-content">
-            <h2>Our Features</h2>
-          </span>
         </div>
-      </div>
-      <div className="features-sector">
-        <div className="sectors-content">
-          <span className="saving-header">Savings Plan</span>
-          <div className="sector-logo">
-            <img src={Sector} alt="" />
-          </div>
-          <span className="introduce-sector">
-            <p>
+      </section>
+
+      {/* Partners Section */}
+      <section className="text-center py-16 bg-white">
+        <h2 className="text-3xl md:text-4xl font-bold">Our Trusted Partners</h2>
+        <p className="mt-4 text-base md:text-lg font-poppins text-gray-600">
+          Powered by collaboration, SheFund partners with trusted industry
+          leaders to redefine digital finance.
+        </p>
+        <img
+          src={Partner}
+          alt="Partners"
+          className="mx-auto mt-8 max-w-4xl w-full object-contain"
+        />
+        <h3 className="mt-12 text-2xl font-semibold">Our Features</h3>
+      </section>
+
+      {/* Savings Plan */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
+          <div className="lg:w-1/2 space-y-6">
+            <span className="bg-orange-100 text-black px-5 py-2 rounded-full font-bold text-2xl inline-block font-['outfit']">
+              Savings Plan
+            </span>
+            <img src={Sector} alt="Sector Icon" className="w-72 h-auto" />
+            <p className="font-['poppins'] text-base leading-7 text-gray-700">
               Introducing Shefund: Your empowering savings solution crafted
-              <br />
               exclusively for women. Take control of your financial future with
-              a <br />
-              platform designed to help you achieve your dreams, whether it's
-              <br />
+              a platform designed to help you achieve your dreams. Whether it’s
               that perfect vacation, a new venture, or simply building your
-              <br />
-              wealth. Join a community of savvy women who are saving smart
-              <br /> and thriving together! Start your journey to financial
-              independence
-              <br />
-              today—because you deserve it!
+              wealth— start your journey to financial independence today.
             </p>
-            <button className="btn">Learn more</button>
-          </span>
-        </div>
-        <div className="sector-device">
-          <img
-            src={FeatDevice}
-            alt="features device"
-            width={'100%'}
-            height={'100%'}
-          />
-        </div>
-      </div>
-      <div className="content-block">
-        <div className="image-block">
-          <img src={BillsImg} alt="Bills payment" />
-        </div>
-        <div className="block-content">
-          <div className="section-header">
-            <span className="saving-header">Bills Payment</span>
-            <div className="section-img">
-              <img src={SecImg} alt="" />
-            </div>
-            <div className="section-content">
-              <p>
-                Empower your everyday with Shefund!
-                <br /> Seamlessly manage your bill payments—from
-                <br /> airtime purchases to TV subscriptions—right at
-                <br /> your fingertips. Take control of your expenses
-                <br /> and enjoy the convenience designed for women
-                <br /> who value simplicity and efficiency. Join the
-                <br /> movement, simplify your life, and fund what
-                <br /> matters most to you!
-              </p>
-              <button className="btn">Learn more</button>
-            </div>
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 font-['outfit'] transition">
+              Learn more
+            </button>
+          </div>
+          <div className="lg:w-1/2">
+            <img
+              src={FeatDevice}
+              alt="Savings"
+              className="w-full max-w-md mx-auto"
+            />
           </div>
         </div>
-      </div>
-      <div className="loan-sector">
-        <div className="inner">
-          <div className="loan-content">
-            <span>Credit/Loan</span>
-            <div className="loan-icons">
-              <img src={LoanIcon} alt="loan icons" />
-            </div>
-            <div className="loan-text">
-              <p>
-                Empower your financial journey with Shefund –<br /> the credit
-                system designed exclusively for
-                <br /> women. Take control of your dreams and
-                <br />
-                ambitions with tailored support that
-                <br /> understands your unique needs. Unlock
-                <br /> opportunities, build your future, and thrive
-                <br />
-                together—because when women rise, we all
-                <br /> soar! Join Shefund today and embrace the
-                <br /> power of financial independence!
-              </p>
-              <button className="btn">Learn more</button>
+      </section>
+      {/* Bills Payment */}
+      <section className="bg-white py-20 px-4">
+        <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
+          <div className="lg:w-1/2 w-full flex justify-center">
+            <div className="bg-orange-100 rounded-2xl p-8">
+              <img
+                src={BillsImg}
+                alt="Bills Payment"
+                className="w-80 h-auto mx-auto"
+              />
             </div>
           </div>
-          <div className="loan-img">
-            <img src={LoanImg} alt="loan img" width={'100%'} height={'100%'} />
-          </div>
-        </div>
-      </div>
-      <div className="refers">
-        <div className="refer-content">
-          <div className="refer-text">
-            <h2>Refer and Earn Free Money</h2>
-            <p>
-              Introducing Shefund Referral 2.0. As part of this new program
-              <br /> we will be giving away upto 100% of our earning from your
-              <br /> referral. And it does not stop there. You get a chance to
-              win
-              <br /> upto 10,000 free tokens. Refer, like, share and Earn.
+          <div className="lg:w-1/2 w-full">
+            <h2 className="inline-block bg-orange-100 text-black text-2xl font-bold font-['poppins'] px-5 py-2 rounded-full mb-4">
+              Bills Payment
+            </h2>
+            <img src={SecImg} alt="Bills Icon" className="w-70 h-auto mb-4" />
+            <p className="text-gray-700 font-['poppins'] text-base leading-7 mb-6">
+              Empower your everyday with SheFund! Seamlessly manage your bill
+              payments—from airtime purchases to TV subscriptions—right at your
+              fingertips. Take control of your expenses and enjoy the
+              convenience designed for women who value simplicity and
+              efficiency.
             </p>
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-full font-['outfit'] hover:bg-orange-600 transition">
+              Learn more
+            </button>
           </div>
-          <button className="btn">Learn more</button>
         </div>
-        <div className="refer-gift">
-          <img
-            src={ReferGift}
-            alt="refer gift"
-            width={'100%'}
-            height={'100%'}
-          />
+      </section>
+
+      {/* Credit / Loan */}
+      <section className="bg-white py-20 px-4">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10">
+          <div className="lg:w-1/2 w-full">
+            <h2 className="inline-block bg-orange-100 text-black text-2xl font-bold font-['poppins'] px-5 py-2 rounded-full mb-4">
+              Credit / Loan
+            </h2>
+            <img src={LoanIcon} alt="Loan Icon" className="w-72 h-auto mb-6" />
+            <p className="text-gray-700 font-['poppins'] text-base leading-7 mb-6">
+              Empower your financial journey with SheFund – the credit system
+              designed exclusively for women. Take control of your dreams and
+              ambitions with tailored support that understands your unique
+              needs. Unlock opportunities, build your future, and thrive
+              together—because when women rise, we all soar!
+            </p>
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-full font-['outfit'] hover:bg-orange-600 transition">
+              Learn more
+            </button>
+          </div>
+          <div className="lg:w-1/2 w-full flex justify-center">
+            <img
+              src={LoanImg}
+              alt="Loan Illustration"
+              className="w-full max-w-xl rounded-2xl"
+            />
+          </div>
         </div>
-      </div>
-      <div className="africa-container">
-        <div className="africa-content">
-          <div className="africa-text">
-            <div className="africa-header">
-              <h2>Building Community Finance for Africa </h2>
-              <p>
-                USP copy Lorem ipsum dolor sit amet,
-                <br /> consectetur adipiscing elit. Nullam a<br /> ultrices
-                quam. Fusce rutrum mauris quis
-                <br /> urna semper lacinia.
+      </section>
+
+      {/* Refer and Earn */}
+      <section className="bg-[#fadac9] py-16 px-4 rounded-2xl lg:mx-10 mx-4 my-10">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+          <div className="lg:w-2/3 w-full">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 font-['outfit']">
+              Refer and Earn Free Money
+            </h2>
+            <p className="text-gray-700 font-['poppins'] mb-6">
+              Introducing SheFund Referral 2.0. As part of this new program, we
+              will be giving away up to 100% of our earnings from your referral.
+              And it does not stop there. You get a chance to win up to 10,000
+              free tokens. Refer, like, share, and earn!
+            </p>
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-full font-['outfit'] hover:bg-orange-600 transition">
+              Learn more
+            </button>
+          </div>
+          <div className="lg:w-1/3 w-full flex justify-center">
+            <img src={ReferGift} alt="Refer Gift" className="w-52 h-auto" />
+          </div>
+        </div>
+      </section>
+
+      {/* Africa Section */}
+      <section className="bg-white py-20 px-4">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10">
+          {/* Left: Text Content */}
+          <div className="lg:w-1/2 space-y-4">
+            <h2 className="text-4xl font-bold text-gray-800 leading-tight font-['outfit']">
+              Building Community <br />
+              Finance for Africa
+            </h2>
+            <p className="text-[#555555] font-['poppins']">
+              USP copy lorem ipsum dolor sit amet,
+              <br />
+              consectetur adipiscing elit. Nullam a <br /> ultrices quam. Fusce
+              rutrum mauris quis <br /> urna semper lacinia.
+            </p>
+            <div className="space-y-3 mt-6">
+              {[
+                'Lörem ipsum johanna Olsson milusat.',
+                'Lörem ipsum johanna Olsson milusat.',
+                'Lörem ipsum johanna Olsson milusat.',
+              ].map((item, i) => (
+                <div key={i} className="flex gap-3 items-start">
+                  <div className="w-5 h-5 mt-1 flex-shrink-0">
+                    <img src={Icon} alt="icon" />
+                  </div>
+                  <p className="text-gray-700 font-['poppins']">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Image + Flags */}
+          <div className="lg:w-1/2 flex flex-col items-center">
+            <img
+              src={AfricaImg}
+              alt="Africa community"
+              className="w-full max-w-md"
+            />
+          </div>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className=" py-16 px-4">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {[
+            { img: Stat1, label: 'Happy Customers' },
+            { img: Stat2, label: 'Community Users' },
+            { img: Stats3, label: 'Resources' },
+            { img: Stats4, label: 'Projects' },
+          ].map((stat, i) => (
+            <div key={i}>
+              <img src={stat.img} alt="Stat" className="w-15 h-15 mx-auto" />
+              <h3 className="text-3xl font-bold text-black-900 mt-3">80%</h3>
+              <p className="text-[1rem] text-gray-600 font-['poppins']">
+                {stat.label}
               </p>
             </div>
-            <div className="africa-lorem">
-              <span className="africa-text-icon">
-                <img alt="" />
-                <p>Lörem ipsum johanna Olsson milusat.</p>
-              </span>
-              <span className="africa-text-icon">
-                <img alt="" />
-                <p>Lörem ipsum johanna Olsson milusat.</p>
-              </span>
-              <span className="africa-text-icon">
-                <img alt="" />
-                <p>Lörem ipsum johanna Olsson milusat.</p>
-              </span>
-            </div>
-          </div>
-          <div className="africa-img">
-            <img src={AfricaImg} alt="" />
-          </div>
+          ))}
         </div>
-      </div>
-      <div className="stats-container">
-        <div className="stats-content">
-          <span className="stats">
-            <img className="icon-system" src={Stat1} alt="Stat" />
-            <h1>80%</h1>
-            <p>Happy Customers</p>
-          </span>
-          <span className="stats">
-            <img className="icon-system" src={Stat2} alt="Stat" />
-            <h1>80%</h1>
-            <p>Community Users</p>
-          </span>
-          <span className="stats">
-            <img className="icon-system" src={Stats3} alt="Stat" />
-            <h1>80%</h1>
-            <p>Resources</p>
-          </span>
-          <span className="stats">
-            <img className="icon-system" src={Stats4} alt="Stat" />
-            <h1>80%</h1>
-            <p>Project</p>
-          </span>
-        </div>
-      </div>
-      <div className="custormer-feed">
-        <div className="custormer-content">
-          <div className="custormer-rating">
-            <span className="heading">
-              <h2>What our customers are saying us?</h2>
-            </span>
-            <p>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 px-4 bg-[#ff6c20]">
+        <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between gap-10">
+          {/* Left Side */}
+          <div className="lg:w-[45%] space-y-6">
+            <h2 className="text-3xl font-bold text-white leading-snug">
+              What our customers <br /> are saying us?
+            </h2>
+            <p className="text-white text-sm leading-relaxed font-['poppins']">
               Various versions have evolved over the years, sometimes by
-              <br />
               accident, sometimes on purpose injected humour and the like.
             </p>
-            <span className="min">10m+</span>
-            <p className="happy">Happy People</p>
-            <span className="over">4.88</span>
-            <p className="over-rate">Overall rating</p>
-            <img alt="" className="stars" />
-          </div>
-          <div className="custormer-res">
-            <div className="cus-slide">
-              <div className="div-avatar">
-                <img alt="" />
-              </div>
-              <p className="name">Cameron Williamson</p>
-              <p className="occupa">Teacher</p>
-              <div className="svg">
-                <img alt="" />
-              </div>
-              <div className="cus-comment">
-                <p>
-                  Shefund is my go-to app for secure and speedy
-                  <br /> financial management. Shefund is my go-to app for
-                  <br /> secure and speedy financial management.Shefund is
-                  <br /> my go-to app for secure and speedy financial
-                  <br /> management.
+            <div className="flex items-center space-x-10 mt-4">
+              <div>
+                <p className="text-2xl font-semibold text-white">10m+</p>
+                <p className="text-white text-sm font-['inter']">
+                  Happy People
                 </p>
               </div>
-              <div className="btn-div">
-                <button className="btn">&#10094;</button>
-                <button className="btn">&#10095;</button>
+
+              <div className="flex flex-col gap-1">
+                <div className="pt-8">
+                  <p className="text-2xl font-semibold text-white">4.88</p>
+                  <p className="text-white text-sm font-['inter']">
+                    Overall rating
+                  </p>
+                </div>
+                <div className="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
               </div>
             </div>
           </div>
+
+          {/* Right Side */}
+          <div className="lg:w-[50%] bg-[#ff6c20] rounded-xl space-y-4 text-white relative">
+            <div className="flex items-start space-x-4">
+              <img
+                src={Avatar}
+                alt="Customer"
+                className="w-14 h-14 rounded-full"
+              />
+              <div>
+                <p className="font-semibold font-['poppins]">
+                  Cameron Williamson
+                </p>
+                <p className="text-sm font-['poppins]">Teacher</p>
+              </div>
+            </div>
+
+            <p className="text-white text-sm font-['poppins'] leading-relaxed mt-2">
+              Shefund is my go-to app for secure and speedy
+              <br className="hidden lg:block" /> financial management. Shefund
+              is my go-to app for
+              <br className="hidden lg:block" /> secure and speedy financial
+              management. Shefund is
+              <br className="hidden lg:block" /> my go-to app for secure and
+              speedy financial
+              <br className="hidden lg:block" /> management.
+            </p>
+
+            <div className="flex space-x-4 mt-4">
+              <button className="cursor-pointer w-14 h-10 text-white border border-white rounded-full hover:bg-white hover:text-[#ff6c20] transition">
+                &#10094;
+              </button>
+              <button className="cursor-pointer w-14 h-10 text-white border border-white rounded-full hover:bg-white hover:text-[#ff6c20] transition">
+                &#10095;
+              </button>
+            </div>
+
+            <img
+              src="../src/images/avatar/SVG.png"
+              alt="Quote Icon"
+              className="w-10 h-10 text-white absolute top-4 right-10 lg:right-20"
+            />
+          </div>
         </div>
-      </div>
-      <div className="news-container">
-        <div className="news-content">
-          <h1>NEWSLETTER</h1>
-          <p className="news">
+      </section>
+
+      {/* Newsletter */}
+      <section className="bg-orange-100 py-16 px-4 rounded-2xl">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl font-bold text-[#ff6c20] uppercase">
+            Newsletter
+          </h2>
+          <p className="text-gray-700 text-md font-['outfit'] mt-2 mb-6">
             Get the latest news about fintech and Culture! We promise no spam,
             only bundles of joy.
           </p>
-          <NewsletterInput />
-        </div>
-      </div>
-      <div className="faq-container">
-        <div className="faq-content">
-          <div className="faq-heading">
-            <h1>Frequently asked questions</h1>
-          </div>
-          <div className="faq-texts">
-            <div className="faq-text1">
-              <div className="faq-para1">
-                <p>
-                  What are the benefits of using INTcash money transfer
-                  services?
-                </p>
-                <span className="faq-icon">
-                  <img src={FaqIcon} alt="" />
-                </span>
-              </div>
-              <div className="faq-para1">
-                <p>
-                  What are the transactions limits for shefund money transfer
-                  services?
-                </p>
-                <span className="faq-icon">
-                  <img src={FaqIcon} alt="" />
-                </span>
-              </div>
-              <div className="faq-para2">
-                <p>
-                  What happens if there is an issue with my shefund money
-                  transfer transaction, and how do i resolve it?
-                </p>
-                <span className="faq-icon2">
-                  <img src={FaqIcon} alt="" />
-                </span>
-              </div>
-            </div>
-            <div className="faq-text1">
-              <div className="faq-para1">
-                <p>
-                  can i track my shefund money transfer transaction, and how do
-                  i do that?
-                </p>
-                <span className="faq-icon">
-                  <img src={FaqIcon} alt="" />
-                </span>
-              </div>
-              <div className="faq-para1">
-                <p>
-                  how long does it take to transfer money using shefund money
-                  transfer services?
-                </p>
-                <span className="faq-icon">
-                  <img src={FaqIcon} alt="" />
-                </span>
-              </div>
-              <div className="faq-para1">
-                <p>
-                  what are the fess associated with using shefund money transfer
-                  services
-                </p>
-                <span className="faq-icon">
-                  <img src={FaqIcon} alt="" />
-                </span>
-              </div>
-            </div>
+
+          <div className="flex items-center shadow-md border-gray-400 border rounded overflow-hidden max-w-xl mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              className="flex-1 px-4 py-3 text-gray-700  focus:outline-none font-poppins"
+            />
+            <button className="bg-[#ff6c20] hover:bg-orange-600 text-white px-7 py-3 font-semibold rounded transition">
+              Subscribe
+            </button>
           </div>
         </div>
-      </div>
-      <div className="block-cta">
-        <div className="block-cta-content">
-          <div className="block-text">
-            <h1>
-              Download
-              <br /> SHEFUND today!
-            </h1>
-            <p>
-              Download the app now for a smarter, more
-              <br /> convenient financial journey.
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-9xl">
+          <h2 className="text-2xl font-['poppins'] font-bold text-gray-900 mb-8">
+            Frequently asked questions
+          </h2>
+          <div className="space-y-6">
+            {[
+              'What Are The Benefits Of Using INTcash Money Transfer Services?',
+              'What Are The Transactions Limits For Shefund Money Transfer Services?',
+              'What happens if there is an issue with my shefund money transfer transaction, and how do i resolve it?',
+              'Can I Track My Shefund Money Transfer Transaction, And How Do I Do That?',
+              'How Long Does It Take To Transfer Money Using Shefund Money Transfer Services?',
+              'What Are The Fess Associated With Using Shefund Money Transfer Services',
+            ].map((faq, index) => (
+              <div
+                key={index}
+                className="flex justify-between items-center border-b border-gray-400 pb-4"
+              >
+                <p className="text-base text-gray-800 font-['outfit']">{faq}</p>
+                <img src={FaqIcon} alt="Expand" className="w-6 h-6" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="flex flex-col lg:flex-row lg:justify-between lg:py-4">
+        {/* Left Content */}
+        <div className="items-center lg:h-[580] lg:w-3/6 bg-[#ff6c20] lg:rounded-br-[8rem]">
+          <div className="lg:m-auto lg:mt-32 grid lg:gap-6 lg:w-md text-center lg:text-left lg:space-x-20 lg:space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-black font-['poppins']">
+              Download <br /> SHEFUND today!
+            </h2>
+            <p className="text-black text-md font-['outfit']">
+              Download the app now for a smarter, more convenient financial
+              journey.
             </p>
-          </div>
-          <div className="block-store">
-            <div className="app-store">
-              <img src={AppStore} alt="" />
-            </div>
-            <div className="pay-store">
-              <img src={PlayStore} alt="" />
+            <div className="flex justify-center lg:justify-start gap-4">
+              <img src={AppStore} alt="App Store" className="h-12" />
+              <img src={PlayStore} alt="Google Play" className="h-12" />
             </div>
           </div>
         </div>
-        <div className="block-img"></div>
-      </div>
+        {/* Right Image */}
+        <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
+          <img
+            src="../src/images/stores/basic.png"
+            alt="SheFund on phone"
+            className=" w-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Footer */}
       <Footer
         Logo={Logo}
         Facebook={Facebook}
@@ -407,4 +418,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;
