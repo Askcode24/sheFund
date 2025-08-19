@@ -13,7 +13,7 @@ import LoanIcon from '../images/Loans icons/Frame 1171277758 (1).png';
 import LoanImg from '../images/Loan Sector/Frame 101246.png';
 import ReferGift from '../images/Refer friend/Frame 1171277763.png';
 import AfricaImg from '../images/Africa/image3.png';
-import Icon from '../images/Africa/icon.png';
+import Icon from '../images/Africa/Icon.png';
 import Stat1 from '../images/statsIcons/System.png';
 import Stat2 from '../images/statsIcons/System2.png';
 import Stats3 from '../images/statsIcons/System.png';
