@@ -172,6 +172,32 @@ export function Navbar({ Logo }) {
           </svg>
         </button>
         <ul className="flex flex-col mt-24 gap-8 px-8">
+          {firstName && (
+            <li>
+              <span className="flex items-center gap-2 text-[#ff6c20] font-semibold mb-2 text-lg animate-fade-in">
+                <svg
+                  className="w-6 h-6 text-[#ff6c20] animate-bounce"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="8" r="4" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 20c0-2.5 3.5-4 8-4s8 1.5 8 4"
+                  />
+                </svg>
+                <span>
+                  Hello,{' '}
+                  <span className="font-bold decoration-[#ff6c20]">
+                    {firstName}
+                  </span>
+                </span>
+              </span>
+            </li>
+          )}
           {navLinks.map((link, idx) => (
             <li
               key={link.name}

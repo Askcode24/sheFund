@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
@@ -26,8 +27,47 @@ import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
 
+const faqData = [
+  {
+    question: 'What Are The Benefits Of Using INTcash Money Transfer Services?',
+    answer:
+      'Lörem ipsum johanna Olsson milusat. Dekanoska preligar. Vobba nysing, och preligar. Seningar trabel, och vobb. Preligar johanna Olsson milusat, dekafon. Seningar vobb, och trabel.',
+  },
+  {
+    question:
+      'What Are The Transactions Limits For Shefund Money Transfer Services?',
+    answer:
+      'Lörem ipsum johanna Olsson milusat. Dekanoska preligar. Vobba nysing, och preligar. Seningar trabel, och vobb. Preligar johanna Olsson milusat, dekafon. Seningar vobb, och trabel.',
+  },
+  {
+    question:
+      'What happens if there is an issue with my shefund money transfer transaction, and how do i resolve it?',
+    answer:
+      'Lörem ipsum johanna Olsson milusat. Dekanoska preligar. Vobba nysing, och preligar. Seningar trabel, och vobb. Preligar johanna Olsson milusat, dekafon. Seningar vobb, och trabel.',
+  },
+  {
+    question:
+      'Can I Track My Shefund Money Transfer Transaction, And How Do I Do That?',
+    answer:
+      'Lörem ipsum johanna Olsson milusat. Dekanoska preligar. Vobba nysing, och preligar. Seningar trabel, och vobb. Preligar johanna Olsson milusat, dekafon. Seningar vobb, och trabel.',
+  },
+  {
+    question:
+      'How Long Does It Take To Transfer Money Using Shefund Money Transfer Services?',
+    answer:
+      'Lörem ipsum johanna Olsson milusat. Dekanoska preligar. Vobba nysing, och preligar. Seningar trabel, och vobb. Preligar johanna Olsson milusat, dekafon. Seningar vobb, och trabel.',
+  },
+  {
+    question:
+      'What Are The Fees Associated With Using Shefund Money Transfer Services',
+    answer:
+      'Lörem ipsum johanna Olsson milusat. Dekanoska preligar. Vobba nysing, och preligar. Seningar trabel, och vobb. Preligar johanna Olsson milusat, dekafon. Seningar vobb, och trabel.',
+  },
+];
+
 const Home = () => {
   const navigate = useNavigate();
+  const [openFaq, setOpenFaq] = useState(null);
 
   return (
     <div className="bg-white text-gray-800 font-outfit">
@@ -360,20 +400,29 @@ const Home = () => {
             Frequently asked questions
           </h2>
           <div className="space-y-6">
-            {[
-              'What Are The Benefits Of Using INTcash Money Transfer Services?',
-              'What Are The Transactions Limits For Shefund Money Transfer Services?',
-              'What happens if there is an issue with my shefund money transfer transaction, and how do i resolve it?',
-              'Can I Track My Shefund Money Transfer Transaction, And How Do I Do That?',
-              'How Long Does It Take To Transfer Money Using Shefund Money Transfer Services?',
-              'What Are The Fess Associated With Using Shefund Money Transfer Services',
-            ].map((faq, index) => (
-              <div
-                key={index}
-                className="flex justify-between items-center border-b border-gray-400 pb-4"
-              >
-                <p className="text-base text-gray-800 font-['outfit']">{faq}</p>
-                <img src={FaqIcon} alt="Expand" className="w-6 h-6" />
+            {faqData.map((faq, index) => (
+              <div key={index} className="border-b border-gray-400 pb-4">
+                <button
+                  type="button"
+                  className="w-full flex justify-between items-center text-left focus:outline-none"
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                >
+                  <p className="text-base text-gray-800 font-['outfit']">
+                    {faq.question}
+                  </p>
+                  <img
+                    src={FaqIcon}
+                    alt="Expand"
+                    className={`w-6 h-6 transform transition-transform duration-200 ${
+                      openFaq === index ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                {openFaq === index && (
+                  <div className="mt-3 text-gray-600 text-sm font-['poppins']">
+                    {faq.answer}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -384,7 +433,7 @@ const Home = () => {
       <section className="flex flex-col lg:flex-row lg:justify-between lg:py-4">
         {/* Left Content */}
         <div className="items-center lg:h-[580] lg:w-3/6 bg-[#ff6c20] lg:rounded-br-[8rem]">
-          <div className="lg:m-auto lg:mt-32 grid lg:gap-6 lg:w-md text-center lg:text-left lg:space-x-20 lg:space-y-6">
+          <div className="lg:m-auto lg:mt-32 grid lg:gap-6 lg:w-md text-center lg:text-left lg:space-x-20 lg:space-y-6 pb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-black font-['poppins']">
               Download <br /> SHEFUND today!
             </h2>

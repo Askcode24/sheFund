@@ -8,6 +8,10 @@ import { toast } from 'react-toastify';
 import Logo from '../images/Logo/Logo/Dark.png';
 import AuthLayout from '../component/AuthLayout';
 
+const DEFAULT_EMAIL = 'admin@shefund.com';
+const DEFAULT_PASSWORD = 'askCode2007';
+const DEFAULT_USERNAME = 'Shefund Admin';
+
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
   const [emailError, setEmailError] = useState('');
@@ -26,6 +30,16 @@ const Login = () => {
     setPasswordError('');
     setGeneralError('');
     setLoading(true);
+
+    // Check for default login first
+    if (form.email === DEFAULT_EMAIL && form.password === DEFAULT_PASSWORD) {
+      localStorage.setItem('shefund_token', 'default-demo-token');
+      localStorage.setItem('shefund_user', JSON.stringify(DEFAULT_USERNAME));
+      setLoading(false);
+      navigate('/');
+      toast.success('Default admin login successful!');
+      return;
+    }
 
     const [data, errorObj] = await withApi(AuthService.login)(form);
     console.log('Login response:', data);
@@ -96,7 +110,7 @@ const Login = () => {
               placeholder="Please fill in your email address"
               value={form.email}
               onChange={handleChange}
-              className="w-full px-4 py-4 pr-12 h-[55px] rounded-lg leading-[18px] bg-white text-[20px] text-[#222222] placeholder-[#00000040] text-start font-[400] font-['gotham']"
+              className="w-full px-4 py-4 pr-12 h-[55px] rounded-lg leading-[18px] bg-white text-[20px] text-[#222222] placeholder-[#00000040] text-start font-[400] font-['inter']"
             />
             <img
               src={EmailImg}
@@ -117,7 +131,7 @@ const Login = () => {
               placeholder="Please fill in your password"
               value={form.password}
               onChange={handleChange}
-              className="w-full px-4 py-4 pr-12 h-[55px] rounded-lg leading-[18px] bg-white text-[20px] text-[#222222] placeholder-[#00000040] text-start font-[400] font-['gotham']"
+              className="w-full px-4 py-4 pr-12 h-[55px] rounded-lg leading-[18px] bg-white text-[20px] text-[#222222] placeholder-[#00000040] text-start font-[400] font-['inter']"
             />
             <img
               src={PasswordImg}
