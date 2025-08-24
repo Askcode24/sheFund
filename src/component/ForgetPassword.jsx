@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
-import EmailImg from '../images/registers/image1.png';
-import PasswordImg from '../images/registers/image2.png';
+import EmailImg from '../images/Registers/image1.png';
+import PasswordImg from '../images/Registers/image2.png';
 import Logo from '../images/Logo/logo/Dark.png';
 import AuthLayout from '../component/AuthLayout';
 import { useState } from 'react';
