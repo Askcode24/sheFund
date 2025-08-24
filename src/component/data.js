@@ -1,12 +1,12 @@
-import Container from '../images/BloqsImg/Container.png';
-import Container1 from '../images/BloqsImg/Container1.png';
-import Container2 from '../images/BloqsImg/Container2.png';
-import Container3 from '../images/BloqsImg/Container3.png';
-import Container4 from '../images/BloqsImg/Container4.png';
-import Container5 from '../images/BloqsImg/Container5.png';
-import Container6 from '../images/BloqsImg/Container6.png';
-import Container7 from '../images/BloqsImg/Container7.png';
-import Container8 from '../images/BloqsImg/Container8.png';
+import Container from '../images/bloqsImg/Container.png';
+import Container1 from '../images/bloqsImg/Container1.png';
+import Container2 from '../images/bloqsImg/Container2.png';
+import Container3 from '../images/bloqsImg/Container3.png';
+import Container4 from '../images/bloqsImg/Container4.png';
+import Container5 from '../images/bloqsImg/Container5.png';
+import Container6 from '../images/bloqsImg/Container6.png';
+import Container7 from '../images/bloqsImg/Container7.png';
+import Container8 from '../images/bloqsImg/Container8.png';
 
 export const gridData = [
   {

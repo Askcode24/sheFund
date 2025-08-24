@@ -4,25 +4,25 @@ import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 
 import Logo from '../images/Logo/logo.png';
-import Hero from '../images/App/Heropage.png';
-import Partner from '../images/Trusted Partner/placeholders.png';
-import Sector from '../images/Features logo/Frame 1171277758.png';
-import FeatDevice from '../images/Features device/Frame 1171277868.png';
-import BillsImg from '../images/Bills payment/Devices.png';
-import SecImg from '../images/Bills/Frame 1171277758.png';
-import LoanIcon from '../images/Loans icons/Frame 1171277758 (1).png';
-import LoanImg from '../images/Loan Sector/Frame 101246.png';
-import ReferGift from '../images/Refer friend/Frame 1171277763.png';
-import AfricaImg from '../images/Africa/image3.png';
-import Icon from '../images/Africa/Icon.png';
+import Hero from '../images/app/Heropage.png';
+import Partner from '../images/trusted_partner/placeholders.png';
+import Sector from '../images/features_logo/Frame 1171277758.png';
+import FeatDevice from '../images/features_device/Frame 1171277868.png';
+import BillsImg from '../images/bills_payment/Devices.png';
+import SecImg from '../images/bills/Frame 1171277758.png';
+import LoanIcon from '../images/loans_icons/Frame 1171277758 (1).png';
+import LoanImg from '../images/loan_sector/Frame 101246.png';
+import ReferGift from '../images/refer_friend/Frame 1171277763.png';
+import AfricaImg from '../images/africa/image3.png';
+import Icon from '../images/africa/Icon.png';
 import Stat1 from '../images/statsIcons/System.png';
 import Stat2 from '../images/statsIcons/System2.png';
 import Stats3 from '../images/statsIcons/System.png';
 import Stats4 from '../images/statsIcons/System3.png';
 import Avatar from '../images/avatar/test1.png.svg';
-import FaqIcon from '../images/Faq/arrow-down.png';
-import AppStore from '../images/Stores/AppStore.png';
-import PlayStore from '../images/Stores/PlayStore.png';
+import FaqIcon from '../images/faq/arrow-down.png';
+import AppStore from '../images/stores/AppStore.png';
+import PlayStore from '../images/stores/PlayStore.png';
 import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
@@ -361,7 +361,7 @@ const Home = () => {
             </div>
 
             <img
-              src="../src/images/avatar/SVG.png"
+              src="../src/images/avatar/svg.png"
               alt="Quote Icon"
               className="w-10 h-10 text-white absolute top-4 right-10 lg:right-20"
             />

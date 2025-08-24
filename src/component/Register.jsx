@@ -7,10 +7,10 @@ import AuthService from '../api/authService';
 import { withApi } from '../api/withApi';
 import { toast } from 'react-toastify';
 
-import EmailImg from '../images/Registers/image1.png';
-import PasswordImg from '../images/Registers/image2.png';
+import EmailImg from '../images/registers/image1.png';
+import PasswordImg from '../images/registers/image2.png';
 import DarkLogo from '../images/Registers/Logo/Dark.png';
-import Logo from '../images/Logo/Logo/Dark.png';
+import Logo from '../images/Logo/logo/Dark.png';
 import AuthLayout from './AuthLayout';
 
 const Register = () => {

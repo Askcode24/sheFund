@@ -1,4 +1,4 @@
-import DarkLogo from '../images/Registers/Logo/Dark.png';
+import DarkLogo from '../images/registers/Logo/Dark.png';
 
 const AuthLayout = ({ children }) => {
   return (
