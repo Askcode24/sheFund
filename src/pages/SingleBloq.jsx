@@ -1,11 +1,11 @@
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
-import Logo from '../images/Logo/logo.png';
+import Logo from '../images/logo/logo.png';
 import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
-import Gamer from '../images/singleBloq/Container.png';
-import Text from '../images/singleBloq/Text.png';
+import Gamer from '../images/singleBloq/container.png';
+import Text from '../images/singleBloq/text.png';
 
 import { gridData } from '../component/data';
 import * as GridComponents from './Grid1';

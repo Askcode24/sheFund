@@ -6,9 +6,9 @@ import Logo from '../images/Logo/logo.png';
 import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
-import Vector from '../images/contacts/Vector.png';
-import Vector1 from '../images/contacts/Frame.png';
-import Vector2 from '../images/contacts/Vector2.png';
+import Vector from '../images/contacts/vector.png';
+import Vector1 from '../images/contacts/frame.png';
+import Vector2 from '../images/contacts/vector2.png';
 
 const Contact = () => {
   const [feedBack, setFeedBack] = useState({
