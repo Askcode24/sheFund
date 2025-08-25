@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import OTPInput from 'otp-input-react';
 import { Link, useLocation } from 'react-router-dom';
 import AuthService from '../api/authService';
-import Logo from '../images/Logo/logo/Dark.png';
+import Logo from '../images/logo/logo/dark.png';
 
 const EmailVerification = ({ email, user }) => {
   const location = useLocation();

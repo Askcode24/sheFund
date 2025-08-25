@@ -1,7 +1,7 @@
 import OTPInput from 'otp-input-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Logo from '../images/Logo/logo/Dark.png';
+import Logo from '../images/logo/logo/dark.png';
 import { useState, useEffect } from 'react';
 import AuthLayout from '../component/AuthLayout';
 import AuthService from '../api/authService';
