@@ -4,7 +4,7 @@ import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 
 import Logo from '../images/Logo/logo.png';
-import Hero from '../images/app/heropage.png';
+import Hero from '../images/appimage/heropage.png';
 import Partner from '../images/trusted_partner/placeholders.png';
 import Sector from '../images/features_logo/Frame 1171277758.png';
 import FeatDevice from '../images/features_device/Frame 1171277868.png';
