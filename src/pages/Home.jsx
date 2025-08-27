@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 
-import Logo from '../images/Logo/logo.png';
+import Logo from '../images/logo/logo.png';
 import Hero from '../images/appimage/heropage.png';
 import Partner from '../images/trusted_partner/placeholders.png';
 import Sector from '../images/features_logo/frame_1171277758.png';
