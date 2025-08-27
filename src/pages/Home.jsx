@@ -8,7 +8,7 @@ import Hero from '../images/appimage/heropage.png';
 import Partner from '../images/trusted_partner/placeholders.png';
 import Sector from '../images/features_logo/frame_1171277758.png';
 import FeatDevice from '../images/features_device/frame_1171277868.png';
-import BilImg from '../images/bills_payment/devices.png';
+import BilImg from '../images/bills_paymet/devices.png';
 import SecImg from '../images/bills/frame_1171277758.png';
 import LoanIcon from '../images/loans_icons/frame_1171277758_(1).png';
 import LoanImg from '../images/loan_sector/frame_101246.png';
