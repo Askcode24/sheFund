@@ -5,7 +5,7 @@ import PasswordImg from '../images/registers/image2.png';
 import AuthService from '../api/authService';
 import { withApi } from '../api/withApi';
 import { toast } from 'react-toastify';
-import Logo from '../images/logo/logo/dark.png';
+import Logo from '../images/logo/darklogo/dark.png';
 import AuthLayout from '../component/AuthLayout';
 
 const DEFAULT_EMAIL = 'admin@shefund.com';
