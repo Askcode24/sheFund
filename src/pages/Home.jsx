@@ -26,7 +26,7 @@ import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Logo from '../images/logo/logo.png';
 import Twitter from '../images/icons/twitter.png';
-import MobileApp from '../src/images/stores/basic.png';
+import MobileApp from '../images/stores/basic.png';
 
 const faqData = [
   {
