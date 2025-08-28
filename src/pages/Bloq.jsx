@@ -32,7 +32,7 @@ const Bloq = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <div className="w-full shadow-sm bg-white">
-        <Navbar Logo={Log} />
+        <Navbar Logo={require('../images/logo/logo.png')} />
       </div>
       <div className="mt-32 max-w-7xl mx-auto px-4 sm:px-4 py-4 sm:py-8 flex-1">
         <h1 className="text-[16px] md:text-lg font-[700] tracking-[0.1em] font-[outfit] leading-[150%] text-[#666666] mb-6  text-center">
@@ -70,7 +70,7 @@ const Bloq = () => {
       </div>
       <div className="w-full mt-auto">
         <Footer
-          Logo={Log}
+          Logo={require('../images/logo/logo.png')}
           Facebook={Facebook}
           Linkedin={Linkedin}
           Twitter={Twitter}
