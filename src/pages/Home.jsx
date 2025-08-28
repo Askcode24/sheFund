@@ -13,7 +13,6 @@ import LoanIcon from '../images/loans_icons/frame_1171277758_(1).png';
 import LoanImg from '../images/loan_sector/frame_101246.png';
 import ReferGift from '../images/refer_friend/frame_1171277763.png';
 import AfricaImg from '../images/africa/image3.png';
-import Icon from '../images/africa/icon.png';
 import Stat1 from '../images/statsIcons/system.png';
 import Stat2 from '../images/statsIcons/system2.png';
 import Stats3 from '../images/statsIcons/system.png';
@@ -253,7 +252,10 @@ const Home = () => {
               ].map((item, i) => (
                 <div key={i} className="flex gap-3 items-start">
                   <div className="w-5 h-5 mt-1 flex-shrink-0">
-                    <img src={Icon} alt="icon" />
+                    <img
+                      src={require('../images/africa/icon.png')}
+                      alt="icon"
+                    />
                   </div>
                   <p className="text-gray-700 font-['poppins']">{item}</p>
                 </div>
