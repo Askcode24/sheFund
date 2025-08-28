@@ -2,6 +2,7 @@ import OTPInput from 'otp-input-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useState, useEffect } from 'react';
+import Logo from '../images/logo/darklogo/dark.png';
 import AuthLayout from '../component/AuthLayout';
 import AuthService from '../api/authService';
 import { withApi } from '../api/withApi';
@@ -56,11 +57,7 @@ const OtpComponent = () => {
     <AuthLayout>
       <div className="flex flex-col justify-center w-full py-12 gap-8">
         <div className="mb-4 w-full flex justify-center lg:hidden">
-          <img
-            className="w-28 h-auto"
-            src={require('../images/logo/darklogo/dark.png')}
-            alt=""
-          />
+          <img className="w-28 h-auto" src={Logo} alt="" />
         </div>
         <h2 className="lg:text-[55px] font-['inter'] text-left md:text-left lg:text-left text-[45px] font-semibold md:font-bold mb-2">
           OTP

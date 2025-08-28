@@ -6,11 +6,7 @@ const AuthLayout = ({ children }) => {
       {/* Left Aside */}
       <div className="hidden lg:flex flex-col justify-between w-full lg:w-1/2 px-10 py-10 overflow-y-auto">
         <div>
-          <img
-            src={require('../images/registers/logo/Dark.png')}
-            alt="logo"
-            className="w-28 mb-10"
-          />
+          <img src={DarkLogo} alt="logo" className="w-28 mb-10" />
           <div className="text-[#727272] ml-16 mt-20 text-sm leading-relaxed space-y-2">
             <p className="text-[#727272] text-lg font-['inter']">
               Important Information

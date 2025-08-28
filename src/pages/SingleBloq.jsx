@@ -1,5 +1,6 @@
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
+import Logo from '../images/logo/logo.png';
 import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
@@ -33,7 +34,7 @@ const SingleBloq = () => {
   return (
     <div className="bg-[#FAFAFA] text-[#333] font-sans">
       {/* Navbar */}
-      <Navbar Logo={require('../images/logo/logo.png')} />
+      <Navbar Logo={Logo} />
 
       {/* Main Container */}
       <main className="max-w-8xl px-4 sm:px-6 lg:px-20 pt-40 space-y-10">
@@ -167,7 +168,7 @@ const SingleBloq = () => {
 
       {/* Footer */}
       <Footer
-        Logo={require('../images/logo/logo.png')}
+        Logo={Logo}
         Facebook={Facebook}
         Linkedin={Linkedin}
         Twitter={Twitter}
