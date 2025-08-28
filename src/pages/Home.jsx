@@ -71,7 +71,7 @@ const Home = () => {
 
   return (
     <div className="bg-white text-gray-800 font-outfit">
-      <Navbar Logo={Logo} />
+      <Navbar Logo={require('../images/logo/logo.png')} />
 
       {/* Hero Section */}
       <section className="bg-[#ff6c20] pt-24 pb-16">
@@ -459,7 +459,7 @@ const Home = () => {
 
       {/* Footer */}
       <Footer
-        Logo={Logo}
+        Logo={require('../images/logo/logo.png')}
         Facebook={Facebook}
         Linkedin={Linkedin}
         Twitter={Twitter}
