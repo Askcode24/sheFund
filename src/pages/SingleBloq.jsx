@@ -6,6 +6,7 @@ import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
 import Gamer from '../images/singleBloq/container.png';
 import Text from '../images/singleBloq/text.png';
+import Image from '../src/images/singlebloq/Image.png';
 
 import { gridData } from '../component/data';
 import * as GridComponents from './Grid1';
@@ -117,7 +118,7 @@ const SingleBloq = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('../src/images/singlebloq/Image.png')",
+              backgroundImage: `url(${Image})`,
             }}
           ></div>
           <div className="absolute top-0 w-lg h-full bg-[#CCE9FF] sm:bg-none opacity-60 lg:right-20"></div>
