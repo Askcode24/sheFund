@@ -5,7 +5,7 @@ import { Footer } from './Footer';
 
 import Hero from '../images/appimage/heropage.png';
 import AfricaImg from '../images/africa/image3.png';
-import Quote from '../images/avatar/svg.png';
+import Quote from '../images/avatar/SVG.png';
 import Partner from '../images/trusted_partner/placeholders.png';
 import Sector from '../images/features_logo/frame_1171277758.png';
 import FeatDevice from '../images/features_device/frame_1171277868.png';

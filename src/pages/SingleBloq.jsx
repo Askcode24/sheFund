@@ -116,11 +116,9 @@ const SingleBloq = () => {
         <div className="relative mt-10 lg:px-28 lg:mx-64 h-[312px] rounded-xl overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={
-              {
-                // backgroundImage: "url('../src/images/singlebloq/image.png')",
-              }
-            }
+            style={{
+              backgroundImage: "url('../src/images/singlebloq/Image.png')",
+            }}
           ></div>
           <div className="absolute top-0 w-lg h-full bg-[#CCE9FF] sm:bg-none opacity-60 lg:right-20"></div>
         </div>
