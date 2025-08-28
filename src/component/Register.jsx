@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 
 import EmailImg from '../images/registers/image1.png';
 import PasswordImg from '../images/registers/image2.png';
-import DarkLogo from '../images/registers/logo/Dark.png';
+
 import Logo from '../images/logo/darklogo/dark.png';
 import AuthLayout from './AuthLayout';
 
