@@ -6,7 +6,7 @@ import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
 import Gamer from '../images/singleBloq/container.png';
 import Text from '../images/singleBloq/text.png';
-import Image from '../images/singlebloq/image.png';
+import ImageGame from '../images/singlebloq/image.png';
 
 import { gridData } from '../component/data';
 import * as GridComponents from './Grid1';
@@ -115,7 +115,10 @@ const SingleBloq = () => {
 
         {/* Middle Overlapping Image */}
         <div className="relative mt-10 lg:px-28 lg:mx-64 h-[312px] rounded-xl overflow-hidden">
-          <img className="absolute inset-0 bg-cover bg-center" src={Image} />
+          <img
+            className="absolute inset-0 bg-cover bg-center"
+            src={ImageGame}
+          />
           <div className="absolute top-0 w-lg h-full bg-[#CCE9FF] sm:bg-none opacity-60 lg:right-20"></div>
         </div>
 
