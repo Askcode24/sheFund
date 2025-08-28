@@ -26,6 +26,7 @@ import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Logo from '../images/logo/logo.png';
 import Twitter from '../images/icons/twitter.png';
+import MobileApp from '../src/images/stores/basic.png';
 
 const faqData = [
   {
@@ -450,7 +451,7 @@ const Home = () => {
         {/* Right Image */}
         <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
           <img
-            src="../src/images/stores/basic.png"
+            src={MobileApp}
             alt="SheFund on phone"
             className=" w-full object-cover"
           />
