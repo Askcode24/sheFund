@@ -5,6 +5,7 @@ import { Footer } from './Footer';
 
 import Hero from '../images/appimage/heropage.png';
 import AfricaImg from '../images/africa/image3.png';
+import Quote from '../images/avatar/svg.png';
 import Partner from '../images/trusted_partner/placeholders.png';
 import Sector from '../images/features_logo/frame_1171277758.png';
 import FeatDevice from '../images/features_device/frame_1171277868.png';
@@ -362,7 +363,7 @@ const Home = () => {
             </div>
 
             <img
-              src="../src/images/avatar/svg.png"
+              src={Quote}
               alt="Quote Icon"
               className="w-10 h-10 text-white absolute top-4 right-10 lg:right-20"
             />
