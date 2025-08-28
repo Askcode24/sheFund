@@ -57,7 +57,11 @@ const OtpComponent = () => {
     <AuthLayout>
       <div className="flex flex-col justify-center w-full py-12 gap-8">
         <div className="mb-4 w-full flex justify-center lg:hidden">
-          <img className="w-28 h-auto" src={Logo} alt="" />
+          <img
+            className="w-28 h-auto"
+            src={require('../images/logo/darklogo/dark.png')}
+            alt=""
+          />
         </div>
         <h2 className="lg:text-[55px] font-['inter'] text-left md:text-left lg:text-left text-[45px] font-semibold md:font-bold mb-2">
           OTP
