@@ -1,5 +1,4 @@
 import { Navbar } from './Navbar';
-import Log from '../images/logo/logo.png';
 import Facebook from '../images/icons/facebook.png';
 import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
