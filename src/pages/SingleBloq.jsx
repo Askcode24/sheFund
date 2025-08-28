@@ -6,7 +6,7 @@ import Linkedin from '../images/icons/linkedin.png';
 import Twitter from '../images/icons/twitter.png';
 import Gamer from '../images/singleBloq/container.png';
 import Text from '../images/singleBloq/text.png';
-import Image from '../src/images/singlebloq/Image.png';
+import Image from '../images/singlebloq/Image.png';
 
 import { gridData } from '../component/data';
 import * as GridComponents from './Grid1';
