@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import EmailImg from '../images/registers/image1.png';
-import PasswordImg from '../images/registers/image2.png';
 import AuthService from '../api/authService';
 import { withApi } from '../api/withApi';
 import { toast } from 'react-toastify';
@@ -113,7 +111,7 @@ const Login = () => {
               className="w-full px-4 py-4 pr-12 h-[55px] rounded-lg leading-[18px] bg-white text-[20px] text-[#222222] placeholder-[#00000040] text-start font-[400] font-['inter']"
             />
             <img
-              src={EmailImg}
+              src={require('../images/registers/image1.png')}
               className="absolute right-5 top-1/2 transform -translate-y-1/2 w-9 h-6"
               alt="email"
             />
@@ -134,7 +132,7 @@ const Login = () => {
               className="w-full px-4 py-4 pr-12 h-[55px] rounded-lg leading-[18px] bg-white text-[20px] text-[#222222] placeholder-[#00000040] text-start font-[400] font-['inter']"
             />
             <img
-              src={PasswordImg}
+              src={require('../images/registers/image2.png')}
               className="absolute right-5 top-1/2 transform -translate-y-1/2 w-9 h-6"
               alt="password"
             />
