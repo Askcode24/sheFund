@@ -12,7 +12,6 @@ import SecImg from '../images/bills/frame_1171277758.png';
 import LoanIcon from '../images/loans_icons/frame_1171277758_(1).png';
 import LoanImg from '../images/loan_sector/frame_101246.png';
 import ReferGift from '../images/refer_friend/frame_1171277763.png';
-import AfricaImg from '../images/africa/image3.png';
 import Stat1 from '../images/statsIcons/system.png';
 import Stat2 from '../images/statsIcons/system2.png';
 import Stats3 from '../images/statsIcons/system.png';
@@ -266,7 +265,7 @@ const Home = () => {
           {/* Right: Image + Flags */}
           <div className="lg:w-1/2 flex flex-col items-center">
             <img
-              src={AfricaImg}
+              src={require('../images/africa/image3.png')}
               alt="Africa community"
               className="w-full max-w-md"
             />
