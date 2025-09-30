@@ -16,7 +16,6 @@ import * as Grid8Components from './Grid8';
 import * as Grid9Components from './Grid9';
 
 const Bloq = () => {
-  // Map component names to imported modules
   const gridsMap = {
     Grid1: GridComponents.Grid1,
     Grid2: Grid2Components.Grid2,

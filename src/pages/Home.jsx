@@ -275,7 +275,7 @@ const Home = () => {
         </div>
       </section>
       {/* Stats Section */}
-      <section className=" py-16 px-4">
+      <section className=" py-16 px vc-4">
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { img: Stat1, label: 'Happy Customers' },
@@ -314,7 +314,10 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-1">
+              <div
+                className="flex 
+              flex-col gap-1"
+              >
                 <div className="pt-8">
                   <p className="text-2xl font-semibold text-white">4.88</p>
                   <p className="text-white text-sm font-['inter']">

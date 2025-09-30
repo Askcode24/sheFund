@@ -58,7 +58,7 @@ export function Navbar({ Logo }) {
         setMenuOpen(false);
       },
     },
-  ].filter(Boolean); // remove falsey (null or false) items
+  ].filter(Boolean);
 
   return (
     <nav className="shadow-lg bg-[#ff6c20] fixed top-0 left-0 w-full z-50">
